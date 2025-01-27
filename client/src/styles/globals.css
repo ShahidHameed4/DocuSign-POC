@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Add this to your global CSS file or inside a style tag in the component */
+@media (max-width: 768px) {
+  .responsive-iframe {
+    height: 500px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-iframe {
+    height: 600px; /* Adjust height for larger screens */
+  }
+}
