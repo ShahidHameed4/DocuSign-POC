@@ -18,9 +18,7 @@ class DocusignService {
       config.docusign.oAuthBasePath
     }/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=${
       config.docusign.integrationKey
-    }&redirect_uri=${encodeURIComponent(
-      "http://localhost:3001/api/docusign/callback/return"
-    )}`;
+    }&redirect_uri=${encodeURIComponent(config.docusign.redirectUri)}`;
   }
 
   async getAccessToken() {
@@ -70,8 +68,7 @@ class DocusignService {
 
     const envelopesApi = new docusign.EnvelopesApi(dsApi);
     const recipientViewRequest = new docusign.RecipientViewRequest();
-    recipientViewRequest.returnUrl =
-      "http://localhost:3001/api/docusign/callback";
+    recipientViewRequest.returnUrl = config.docusign.returnUrl;
     recipientViewRequest.authenticationMethod = "none";
     recipientViewRequest.email = email;
     recipientViewRequest.userName = name;
