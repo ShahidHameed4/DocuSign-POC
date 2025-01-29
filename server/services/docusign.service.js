@@ -68,7 +68,7 @@ class DocusignService {
 
     const envelopesApi = new docusign.EnvelopesApi(dsApi);
     const recipientViewRequest = new docusign.RecipientViewRequest();
-    recipientViewRequest.returnUrl = config.docusign.returnUrl;
+    recipientViewRequest.returnUrl = config.docusign.callbackUrl;
     recipientViewRequest.authenticationMethod = "none";
     recipientViewRequest.email = email;
     recipientViewRequest.userName = name;

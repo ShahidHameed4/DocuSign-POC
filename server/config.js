@@ -3,6 +3,7 @@ dotenv.config();
 
 const config = {
   port: process.env.PORT || 3001,
+  client: "http://localhost:3000",
   docusign: {
     accountId: process.env.DOCUSIGN_ACCOUNT_ID,
     integrationKey: process.env.DOCUSIGN_INTEGRATION_KEY,

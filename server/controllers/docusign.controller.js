@@ -1,3 +1,4 @@
+const config = require("../config");
 const docusignService = require("../services/docusign.service");
 
 class DocusignController {
@@ -63,7 +64,7 @@ class DocusignController {
   handleCallback(req, res) {
     try {
       const queryParams = new URLSearchParams(req.query);
-      const redirectUrl = `http://localhost:3000?${queryParams.toString()}`;
+      const redirectUrl = `${config.client}?${queryParams.toString()}`;
       res.redirect(redirectUrl);
     } catch (error) {
       res.status(500).json({ error: error.message });
