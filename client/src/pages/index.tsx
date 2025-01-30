@@ -178,7 +178,7 @@ const Home: React.FC = () => {
             <option value="">Select a Document Type</option>
             <option value="nda">Non-Disclosure Agreement</option>
             <option value="contract">Service Contract</option>
-            <option value="agreement">General Agreement</option>
+            <option value="lease">Lease Agreement</option>
           </select>
 
           <button

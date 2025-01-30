@@ -73,42 +73,138 @@ const documentConfig = {
   },
   contract: {
     template: `
-CONTRACT AGREEMENT
-
-This Contract Agreement ("Agreement") is entered into as of [DATE] by and between:
-
-Party A: The Company
-Address: 123 Business Rd, City, Country
-
-Party B: [NAME]
-Address: [ADDRESS]
-
-----------------------------------------------------------------------------
-WHEREAS, both parties agree to the terms and conditions specified herein;
-
-NOW, THEREFORE, the parties agree as follows:
-
-1. Agreement Terms.
-Party A agrees to provide services, and Party B agrees to pay for said services.
-
-2. Term.
-This Agreement shall remain in effect for a period of 1 year from the date of execution.
-
-3. Governing Law.
-This Agreement shall be governed by the laws of the State of California.
-
----------------------------------------------------------------------------
-IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
-
-Party A:                                   Party B:
-___________________________                ___________________________
-The Company                                [NAME]
-Date: [DATE]                  Date: [DATE]
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .signature-section {
+      margin-top: 50px;
+      text-align: center;
+      border: 2px dashed #888;
+      padding: 50px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>SERVICE AGREEMENT</h1>
+  <p>This Service Agreement ("Agreement") is entered into as of <strong>[DATE]</strong> by and between:</p>
+  
+  <div class="section">
+    <p><strong>Service Provider:</strong> The Company</p>
+    <p><strong>Client:</strong> [NAME]</p>
+    <p><strong>Client Address:</strong> [ADDRESS]</p>
+  </div>
+  
+  <hr>
+  
+  <div class="section">
+    <p><strong>WHEREAS</strong>, the Service Provider agrees to perform services for the Client under the terms of this Agreement;</p>
+    <p><strong>NOW, THEREFORE</strong>, the parties agree as follows:</p>
+    <ul>
+      <li><strong>Payment:</strong> The Client agrees to pay the Service Provider.</li>
+      <li><strong>Termination:</strong> Either party may terminate this Agreement with 30 days’ notice.</li>
+    </ul>
+  </div>
+  
+  <div class="signature-section">
+    <p><strong>Signature:</strong></p>
+    <br/>
+    <p>_____________________________</p>
+    <p>[NAME]</p>
+    <p>Date: [DATE]</p>
+  </div>
+</body>
+</html>
 `,
     signHere: {
-      pageNumber: "1",
-      xPosition: "150",
-      yPosition: "200",
+      pageNumber: "1", // This refers to the first page of the document.
+      xPosition: "290", // Adjust X-axis position for the signature field.
+      yPosition: "443", // Adjust Y-axis position for the signature field.
+    },
+  },
+  lease: {
+    template: `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .signature-section {
+      margin-top: 50px;
+      text-align: center;
+      border: 2px dashed #888;
+      padding: 50px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>LEASE AGREEMENT</h1>
+  <p>This Lease Agreement ("Agreement") is made and entered into as of <strong>[DATE]</strong> by:</p>
+  
+  <div class="section">
+    <p><strong>Lessee:</strong> [NAME]</p>
+    <p><strong>Lessee Address:</strong> [ADDRESS]</p>
+  </div>
+  
+  <hr>
+  
+  <div class="section">
+    <p><strong>WHEREAS</strong>, the Lessor agrees to lease the property to the Lessee;</p>
+    <p><strong>NOW, THEREFORE</strong>, the parties agree as follows:</p>
+    <ul>
+      <li><strong>Lease Term:</strong> The lease term shall commence on [DATE] and continue until April 1st, 2024.</li>
+      <li><strong>Rent:</strong> The Lessee agrees to pay monthly rent as agreed.</li>
+      <li><strong>Governing Law:</strong> This Agreement shall be governed by the laws of California.</li>
+    </ul>
+  </div>
+  
+  <div class="signature-section">
+    <p><strong>Signature:</strong></p>
+    <br/>
+    <p>_____________________________</p>
+    <p>[NAME]</p>
+    <p>Date: [DATE]</p>
+  </div>
+</body>
+</html>
+`,
+    signHere: {
+      pageNumber: "1", // This refers to the first page of the document.
+      xPosition: "280", // Adjust X-axis position for the signature field.
+      yPosition: "420", // Adjust Y-axis position for the signature field.
     },
   },
 };
